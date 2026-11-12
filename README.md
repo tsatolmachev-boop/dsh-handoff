@@ -2,7 +2,15 @@
 
 Исходники плагинов + runbook для установки DSH на домашнем ПК.
 
-## GitHub (этот репозиторий, private)
+**Публичная ссылка (вход не нужен):** https://github.com/tsatolmachev-boop/dsh-handoff
+
+## Скачать всё одним архивом
+
+https://github.com/tsatolmachev-boop/dsh-handoff/archive/refs/heads/main.zip
+
+Распакуй, внутри будет папка `dsh-handoff-main\default-workspace` — передай Codex полный путь к ней.
+
+## Или клонировать
 
 ```powershell
 git clone https://github.com/tsatolmachev-boop/dsh-handoff.git "$env:USERPROFILE\dsh-handoff"
@@ -10,13 +18,10 @@ $WS = (Resolve-Path "$env:USERPROFILE\dsh-handoff\default-workspace").Path
 Test-Path (Join-Path $WS 'chrome-browser-agent\dsh-bundle\package.json')
 ```
 
-Без Git: на странице репозитория Code → Download ZIP, распакуй и используй путь к `default-workspace`.
+## Дальше
 
-## Git bundle (офлайн)
+Передай Codex путь `$WS` и продолжай Фазу 1 runbook `DSH_home_PC.md`.
 
-```powershell
-git clone "<путь к DSH_handoff.bundle>" "$env:USERPROFILE\dsh-handoff"
-$WS = (Resolve-Path "$env:USERPROFILE\dsh-handoff\default-workspace").Path
-```
+## Офлайн-варианты (без GitHub)
 
-Дальше передай Codex полный путь `$WS` и продолжай Фазу 1 runbook `DSH_home_PC.md`.
+`DSH_handoff.bundle` (git bundle) или `DSH_исходники_плагинов.zip` — лежат в OneDrive-папке `deepseek-harness`.
