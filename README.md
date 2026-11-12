@@ -1,15 +1,22 @@
-# DSH handoff (git bundle)
+# DSH handoff
 
-Этот репозиторий содержит исходники плагинов для установки DSH на домашнем ПК.
+Исходники плагинов + runbook для установки DSH на домашнем ПК.
 
-## Клонирование на домашнем ПК
+## GitHub (этот репозиторий, private)
 
 ```powershell
-git clone "<путь к DSH_handoff.bundle>" "$env:USERPROFILE\dsh-handoff"
+git clone https://github.com/tsatolmachev-boop/dsh-handoff.git "$env:USERPROFILE\dsh-handoff"
 $WS = (Resolve-Path "$env:USERPROFILE\dsh-handoff\default-workspace").Path
 Test-Path (Join-Path $WS 'chrome-browser-agent\dsh-bundle\package.json')
 ```
 
-Дальше передай Codex путь `$WS` (полный) и продолжай Фазу 1 runbook `DSH_home_PC.md`.
+Без Git: на странице репозитория Code → Download ZIP, распакуй и используй путь к `default-workspace`.
 
-Если Git не установлен: https://git-scm.com/download/win (или используй DSH_исходники_плагинов.zip).
+## Git bundle (офлайн)
+
+```powershell
+git clone "<путь к DSH_handoff.bundle>" "$env:USERPROFILE\dsh-handoff"
+$WS = (Resolve-Path "$env:USERPROFILE\dsh-handoff\default-workspace").Path
+```
+
+Дальше передай Codex полный путь `$WS` и продолжай Фазу 1 runbook `DSH_home_PC.md`.

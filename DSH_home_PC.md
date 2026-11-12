@@ -305,6 +305,13 @@ $WS = (Resolve-Path "$env:USERPROFILE\dsh-handoff\default-workspace").Path
 Test-Path (Join-Path $WS 'chrome-browser-agent\dsh-bundle\package.json')
 ```
 Если `True` — сохрани `$WS` в `ws.txt` и продолжай Фазу 1. Если Git на домашнем ПК нет — установи с `https://git-scm.com/download/win` или используй zip.
+- **Вариант через GitHub (приватный репозиторий):** `https://github.com/tsatolmachev-boop/dsh-handoff` — приватный репозиторий с теми же исходниками и runbook (доступ после входа в GitHub-аккаунт `tsatolmachev-boop`). На домашнем ПК:
+```powershell
+git clone https://github.com/tsatolmachev-boop/dsh-handoff.git "$env:USERPROFILE\dsh-handoff"
+$WS = (Resolve-Path "$env:USERPROFILE\dsh-handoff\default-workspace").Path
+Test-Path (Join-Path $WS 'chrome-browser-agent\dsh-bundle\package.json')
+```
+Если Git попросит вход — откроется браузер, войди в свой GitHub. Без Git: на странице репозитория **Code → Download ZIP**, распакуй и передай Codex путь к `default-workspace`.
 - Явно задай путь в обход авто-поиска и проверь:
 ```powershell
 $WS = 'C:\Users\<имя>\Documents\deepseek-harness\default-workspace'   # подставь реальный путь
