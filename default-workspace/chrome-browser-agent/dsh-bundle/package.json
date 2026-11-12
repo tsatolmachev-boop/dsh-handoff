@@ -1,0 +1,17 @@
+{
+  "name": "@local/dsh-browser-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MCP bridge that exposes the user's Chrome browser (via the DSH Browser Agent extension) as mcp__browser__* tools.",
+  "type": "module",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["cordis.patch.yml", "locale/*.json", "icon.svg"],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

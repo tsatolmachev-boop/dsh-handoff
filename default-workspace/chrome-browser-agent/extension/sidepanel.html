@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DSH Browser Agent</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header class="top">
+      <span class="dot" id="dot" title="Мост"></span>
+      <span class="title">DSH Browser Agent</span>
+      <span class="chip" id="versionChip">v2.2.0</span>
+      <label class="pause" title="Пауза блокирует действия агента">
+        <input id="paused" type="checkbox" />
+        <span class="track"><span class="knob"></span></span>
+        <span class="pause-label" id="pauseLabel">работает</span>
+      </label>
+    </header>
+
+    <main class="chat" id="chat">
+      <div class="empty" id="empty">
+        <div class="empty-title">Чем помочь в браузере?</div>
+        <div class="empty-sub">
+          Напишите задачу — агент сам прочитает страницу, найдёт элемент, нажмёт, введёт текст и вернёт результат.
+        </div>
+        <div class="examples" id="examples">
+          <button data-prompt="Что сейчас открыто? Кратко опиши страницу.">Что открыто?</button>
+          <button data-prompt="Найди на странице кнопку «Отправить сообщение» и нажми её.">Нажми «Отправить»</button>
+          <button data-prompt="Прочитай открытую переписку и сделай краткую сводку по пунктам.">Сводка переписки</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="composer">
+      <textarea id="input" rows="1" placeholder="Задача для агента…" spellcheck="false"></textarea>
+      <button id="send" title="Отправить (Enter)">→</button>
+    </div>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

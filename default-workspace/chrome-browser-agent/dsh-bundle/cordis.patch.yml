@@ -1,0 +1,16 @@
+- insert:
+    - id: browser-bridge-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: browser
+        transport: stdio
+        command: 'C:\Users\teh-t\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\node\bin\node.exe'
+        args:
+          - 'C:\Users\teh-t\OneDrive\Документы\deepseek-harness\default-workspace\chrome-browser-agent\bridge\bridge.cjs'
+          - '--port'
+          - '8787'
+          - '--screenshots'
+          - 'C:\Users\teh-t\OneDrive\Документы\deepseek-harness\default-workspace\chrome-browser-agent\.screenshots'
+        cwd: 'C:\Users\teh-t\OneDrive\Документы\deepseek-harness\default-workspace\chrome-browser-agent\bridge'
+        toolCallTimeoutMs: 45000
+        failOnStartupError: false

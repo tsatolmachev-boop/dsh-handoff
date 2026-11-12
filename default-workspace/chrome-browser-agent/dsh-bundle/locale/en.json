@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Browser Bridge (Chrome agent)",
+    "description": "Connects the DSH Browser Agent Chrome extension so the agent can read pages and act in the user's browser."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@local/dsh-computer-control",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Управление компьютером Windows для DSH: скриншоты экрана, список окон, мышь, клавиатура и буфер обмена.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "ps/*.ps1",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

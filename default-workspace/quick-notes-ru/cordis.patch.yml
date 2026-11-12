@@ -1,0 +1,3 @@
+- insert:
+    - id: quick-notes-ru
+      name: '@local/sidebar-quick-notes-ru'
